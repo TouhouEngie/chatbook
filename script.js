@@ -58,8 +58,8 @@ function postIt() {
         document.getElementById("signInOptions").classList.remove("hidden");
         return;
     }
-    if (message.value.length < 4) {
-        alert.innerText = "Message too short."
+    if (message.value.length < 4 || message.value.length > 5000) {
+        alert.innerText = "Invalid message length."
         return;
     }
     addDoc(collection(database, "posts"), {
@@ -79,6 +79,7 @@ async function isLoggedIn() {
 
         document.getElementById("welcome").innerText = `Welcome ${currentUsername}`
         document.getElementById("accountOptions").classList.remove("hidden");
+        document.getElementById("postform").classList.remove("hidden");
         document.getElementById("signInOptions").classList.add("hidden");
         document.getElementById("settings").addEventListener("click", () => { 
             document.getElementById("settingsdialog").showModal();
@@ -90,6 +91,7 @@ async function isLoggedIn() {
         });
     } else {
         document.getElementById("accountOptions").classList.add("hidden");
+        document.getElementById("postform").classList.add("hidden");
         document.getElementById("signInOptions").classList.remove("hidden");
         document.getElementById("signInNormally").addEventListener("click", () => {
             document.getElementById("signindialog").showModal();
@@ -191,6 +193,7 @@ document.getElementById("signInWithElgoog").addEventListener("click", () => { si
 }); });
 document.getElementById("signOut").addEventListener("click", () => { signOut(auth).then(() => { window.location.replace("/") }); });
 // todo: error handling
+
 
 const form = document.getElementById("postform");
 form.addEventListener("submit", (e) => {

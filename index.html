@@ -30,10 +30,10 @@
             </div>
             
         </div>
-        <div id="postboard" class="grid grid-cols-2 sm:grid-cols-3 gap-3 m-3 overflow-y-auto"></div>
+        <div id="postboard" class="grid grid-cols-1 sm:grid-cols-3 gap-3 m-3 overflow-y-auto"></div>
         
         <!-- how make it so that it doesn't go in front of posts? -->
-        <form id="postform" class="bottom-2 w-full m-3">
+        <form id="postform" class="bottom-2 w-full m-3 hidden">
             <p id="alert"></p>
             <textarea id="message" class="text border-white bg-black rounded-md placeholder:text-gray-500 w-1/2 h-25 resize-none" placeholder="Enter your message here..."></textarea><br>
             <button type="submit" class="px-5 py-1 border-white bg-sky-500 rounded-md pointer">Post</button>
@@ -50,12 +50,12 @@
                 </div>
                 <div class="chunkofsettings">
                     <label>E-mail:
-                        <input type="email" id="email" class="border-white bg-black rounded-md placeholder:text-silver-500 p-1 w-full" placeholder="E-mail" disabled/>
+                        <input type="email" id="existingemail" class="border-white bg-black rounded-md placeholder:text-silver-500 p-1 w-full" placeholder="E-mail" disabled/>
                     </label>
                 </div>
                 <div class="chunkofsettings">
                     <label>Password:
-                        <input type="password" id="password" class="border-white bg-black rounded-md placeholder:text-silver-500 p-1 w-full" placeholder="Password" disabled/>
+                        <input type="password" id="newpswd" class="border-white bg-black rounded-md placeholder:text-silver-500 p-1 w-full" placeholder="Password" disabled/>
                     </label>
                 </div>
                 <div class="abloodybutton">
@@ -84,7 +84,24 @@
                 </div>
                 <div>
                     <button type="submit" class="px-5 py-1 border-white bg-sky-500 rounded-md pointer">Sign in</button>
+                    <button onclick="closeThatBozo('signindialog')" id="createnewaccount" class="px-5 py-1 border-white bg-sky-500 rounded-md pointer">Create account...</button>
                     <button onclick="closeThatBozo('signindialog')" class="px-5 py-1 border-white bg-red-600 rounded-md pointer">Cancel</button>
+                </div>
+            </form>
+        </dialog>
+
+        <dialog id="createaccountdialog" class="text-white bg-yellow-800 sm:translate-x-1/2 translate-y-1/2 rounded-md p-2">
+            <p class="">Create account</p>
+            <form id="createaccount">
+                <div class="pb-1">
+                    <input type="email" id="newemail" class="border-white bg-black rounded-md placeholder:text-silver-500 text p-1" placeholder="E-mail" required/>
+                </div>
+                <div class="pb-1">
+                    <input type="password" id="password" class="border-white bg-black rounded-md placeholder:text-silver-500 text p-1" placeholder="Password" required/>
+                </div>
+                <div>
+                    <button type="submit" class="px-5 py-1 border-white bg-sky-500 rounded-md pointer">Sign in</button>
+                    <button onclick="closeThatBozo('createaccountdialog')" class="px-5 py-1 border-white bg-red-600 rounded-md pointer">Cancel</button>
                 </div>
             </form>
         </dialog>
