@@ -6,6 +6,9 @@
         <link rel="stylesheet" type="text/css" href="./input.css" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+        <!-- jQuery - some code was copied from the mainline so this is temporary -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
         <!-- this is all SEO and social media optimizations -->
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +46,7 @@
             <p>Account settings</p>
             <p class="text-sm hidden sm:block">If you have a supporting keyboard, press ESC to cancel.</p>
             <form id="accountsettings">
-                <div class="chunkofsettings">
+                <div class="chunkofsettings text">
                     <label>Username:
                         <input type="text" id="username" class="border-white bg-black rounded-md placeholder:text-silver-500 p-1 w-full" placeholder="Username" required/>
                     </label>
@@ -58,7 +61,7 @@
                         <input type="password" id="newpswd" class="border-white bg-black rounded-md placeholder:text-silver-500 p-1 w-full" placeholder="Password" disabled/>
                     </label>
                 </div>
-                <div class="abloodybutton">
+                <div class="abloodybutton pointer">
                     <button type="submit" class="px-5 py-1 border-white bg-sky-500 rounded-md pointer">Update</button>
                     <button onclick="closeThatBozo('settingsdialog')" class="px-5 py-1 border-white bg-red-600 rounded-md pointer">Cancel</button>
                 </div>

@@ -1,3 +1,11 @@
-.pointer, .abloodybutton { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/1/select.cur'), pointer; }
-* { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/1/normal.cur'), default; }
-.text, .chunkofsettings { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/1/text_sel.cur'), text; }
+/* .abloodybutton, .chunkofsettings */
+
+.cursor-1-pointer { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/1/select.cur'), pointer; }
+.cursor-1-normal { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/1/normal.cur'), default; }
+.cursor-1-text { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/1/text_sel.cur'), text; }
+.cursor-2-pointer { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/2/Link.cur'), pointer; }
+.cursor-2-normal { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/2/Normal.cur'), default; }
+.cursor-2-text { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/2/Text.cur'), text; }
+.cursor-3-pointer { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/3/select.cur'), pointer; }
+.cursor-3-normal { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/3/normal.cur'), default; }
+.cursor-3-text { cursor: url('https://fileserver.touhouengie.com/drive/webpage_data/cursors/3/text.cur'), text; }
