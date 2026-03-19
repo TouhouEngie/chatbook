@@ -243,7 +243,7 @@ function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";domain=.touhouengie.com;samesite=lax" + expires + ";path=/";
+    document.cookie = cname + "=" + cvalue + ";domain=.touhouengie.com;samesite=Lax" + expires + ";path=/";
     configureCursorSettings();
 }
 
