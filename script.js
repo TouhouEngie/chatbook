@@ -200,7 +200,6 @@ document.getElementById("signOut").addEventListener("click", () => { signOut(aut
 const form = document.getElementById("postform");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    // or just f#cking hide the form before user login?
     postIt();
 });
 const message = document.getElementById("message");
@@ -250,10 +249,9 @@ function setCookie(cname, cvalue, exdays) {
 
 function configureCursor(num) {
     num = num || 1
-    // note: this may be an issue later on
-    const cursorPointer = $(".pointer");
-    const cursorDefault = $(".normal");
-    const cursorText = $(".text");
+    const cursorPointer = document.querySelectorAll(".pointer");
+    const cursorDefault = document.querySelectorAll(".normal");
+    const cursorText = document.querySelectorAll(".text");
     var param = ["cursor-", "0", "-", "~"];
     var a = getCookie("cursor");
     param[1] = num.toString();
@@ -266,7 +264,7 @@ function configureCursor(num) {
       var text = arr.join('');
       if (cursor.length < 1) {
         arr[1] = a;
-        cursor = $(arr.join(''));
+        cursor = document.querySelectorAll(arr.join(''));
         style = arr.join('');
       }
       setCursors(cursor, style, text);
