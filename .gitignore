@@ -1,2 +1,9 @@
 secret.json
 secrets.js
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
